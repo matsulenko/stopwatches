@@ -7,18 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC18584E2B85258900F40FBA /* StopwatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18584D2B85258900F40FBA /* StopwatchData.swift */; };
 		BC2FFD2B2B6A9BD8008F343B /* StopwatchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFD2A2B6A9BD8008F343B /* StopwatchesApp.swift */; };
 		BC2FFD2D2B6A9BD8008F343B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFD2C2B6A9BD8008F343B /* ContentView.swift */; };
 		BC2FFD2F2B6A9BD9008F343B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2FFD2E2B6A9BD9008F343B /* Assets.xcassets */; };
 		BC2FFD322B6A9BD9008F343B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2FFD312B6A9BD9008F343B /* Preview Assets.xcassets */; };
+		BC3B26642B93E52F00A97227 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B26632B93E52F00A97227 /* Collection.swift */; };
+		BC5C32BC2B97D79000A33C59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC5C32BE2B97D79000A33C59 /* InfoPlist.strings */; };
+		BCBBA5C32B712F6C002E5182 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5C22B712F6C002E5182 /* StopwatchView.swift */; };
+		BCBBA5C82B7134B2002E5182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCBBA5CA2B7134B2002E5182 /* Localizable.strings */; };
+		BCBBA5D22B713C8A002E5182 /* StopwatchTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5D12B713C8A002E5182 /* StopwatchTime.swift */; };
+		BCBBA5D42B713E64002E5182 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5D32B713E64002E5182 /* Stopwatch.swift */; };
+		BCBBA5D62B71417E002E5182 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5D52B71417E002E5182 /* DefaultButton.swift */; };
+		BCBBA5DE2B714DD8002E5182 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5DD2B714DD8002E5182 /* CustomDivider.swift */; };
+		BCBBA5E02B7164A3002E5182 /* StartAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5DF2B7164A3002E5182 /* StartAllButton.swift */; };
+		BCF6A1BE2B8A545900BB3FEC /* CoreDataServiceSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF6A1BD2B8A545900BB3FEC /* CoreDataServiceSW.swift */; };
+		BCF6A1C22B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF6A1C02B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC18584D2B85258900F40FBA /* StopwatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchData.swift; sourceTree = "<group>"; };
 		BC2FFD272B6A9BD8008F343B /* Stopwatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2FFD2A2B6A9BD8008F343B /* StopwatchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchesApp.swift; sourceTree = "<group>"; };
 		BC2FFD2C2B6A9BD8008F343B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC2FFD2E2B6A9BD9008F343B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC2FFD312B6A9BD9008F343B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC3B26632B93E52F00A97227 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		BC5C32B92B97D72D00A33C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BC5C32BD2B97D79000A33C59 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC5C32BF2B97D79600A33C59 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC5C32C02B97D79700A33C59 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC5C32C12B97D7A400A33C59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCBBA5C22B712F6C002E5182 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		BCBBA5C92B7134B2002E5182 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCBBA5CB2B7134B5002E5182 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCBBA5CC2B7134B7002E5182 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCBBA5D12B713C8A002E5182 /* StopwatchTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTime.swift; sourceTree = "<group>"; };
+		BCBBA5D32B713E64002E5182 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		BCBBA5D52B71417E002E5182 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		BCBBA5DD2B714DD8002E5182 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		BCBBA5DF2B7164A3002E5182 /* StartAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAllButton.swift; sourceTree = "<group>"; };
+		BCF6A1BD2B8A545900BB3FEC /* CoreDataServiceSW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceSW.swift; sourceTree = "<group>"; };
+		BCF6A1C12B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StopwatchesDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +81,12 @@
 		BC2FFD292B6A9BD8008F343B /* Stopwatches */ = {
 			isa = PBXGroup;
 			children = (
-				BC2FFD2A2B6A9BD8008F343B /* StopwatchesApp.swift */,
-				BC2FFD2C2B6A9BD8008F343B /* ContentView.swift */,
+				BCBBA5D02B713BC9002E5182 /* View */,
+				BCF6A1BC2B8A543B00BB3FEC /* Model */,
 				BC2FFD2E2B6A9BD9008F343B /* Assets.xcassets */,
+				BCBBA5CA2B7134B2002E5182 /* Localizable.strings */,
+				BC5C32B92B97D72D00A33C59 /* Info.plist */,
+				BC5C32BE2B97D79000A33C59 /* InfoPlist.strings */,
 				BC2FFD302B6A9BD9008F343B /* Preview Content */,
 			);
 			path = Stopwatches;
@@ -65,6 +98,56 @@
 				BC2FFD312B6A9BD9008F343B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BCBBA5CD2B713B65002E5182 /* Stopwatch */ = {
+			isa = PBXGroup;
+			children = (
+				BCBBA5C22B712F6C002E5182 /* StopwatchView.swift */,
+				BCBBA5D32B713E64002E5182 /* Stopwatch.swift */,
+				BCBBA5D12B713C8A002E5182 /* StopwatchTime.swift */,
+				BCBBA5DF2B7164A3002E5182 /* StartAllButton.swift */,
+				BC18584D2B85258900F40FBA /* StopwatchData.swift */,
+			);
+			path = Stopwatch;
+			sourceTree = "<group>";
+		};
+		BCBBA5CE2B713B85002E5182 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BC2FFD2A2B6A9BD8008F343B /* StopwatchesApp.swift */,
+				BC2FFD2C2B6A9BD8008F343B /* ContentView.swift */,
+				BCBBA5D52B71417E002E5182 /* DefaultButton.swift */,
+				BCBBA5DD2B714DD8002E5182 /* CustomDivider.swift */,
+				BC3B26632B93E52F00A97227 /* Collection.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BCBBA5D02B713BC9002E5182 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCBBA5CE2B713B85002E5182 /* Core */,
+				BCBBA5CD2B713B65002E5182 /* Stopwatch */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCF6A1BC2B8A543B00BB3FEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCF6A1BF2B8A55EF00BB3FEC /* CoreDataService */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCF6A1BF2B8A55EF00BB3FEC /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+				BCF6A1BD2B8A545900BB3FEC /* CoreDataServiceSW.swift */,
+				BCF6A1C02B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld */,
+			);
+			path = CoreDataService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +192,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				uk,
+				de,
 			);
 			mainGroup = BC2FFD1E2B6A9BD8008F343B;
 			productRefGroup = BC2FFD282B6A9BD8008F343B /* Products */;
@@ -126,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2FFD322B6A9BD9008F343B /* Preview Assets.xcassets in Resources */,
+				BC5C32BC2B97D79000A33C59 /* InfoPlist.strings in Resources */,
+				BCBBA5C82B7134B2002E5182 /* Localizable.strings in Resources */,
 				BC2FFD2F2B6A9BD9008F343B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,11 +226,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2FFD2D2B6A9BD8008F343B /* ContentView.swift in Sources */,
+				BCBBA5D42B713E64002E5182 /* Stopwatch.swift in Sources */,
 				BC2FFD2B2B6A9BD8008F343B /* StopwatchesApp.swift in Sources */,
+				BCBBA5D22B713C8A002E5182 /* StopwatchTime.swift in Sources */,
+				BCF6A1BE2B8A545900BB3FEC /* CoreDataServiceSW.swift in Sources */,
+				BCBBA5DE2B714DD8002E5182 /* CustomDivider.swift in Sources */,
+				BCBBA5E02B7164A3002E5182 /* StartAllButton.swift in Sources */,
+				BC3B26642B93E52F00A97227 /* Collection.swift in Sources */,
+				BCBBA5C32B712F6C002E5182 /* StopwatchView.swift in Sources */,
+				BC18584E2B85258900F40FBA /* StopwatchData.swift in Sources */,
+				BCF6A1C22B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld in Sources */,
+				BCBBA5D62B71417E002E5182 /* DefaultButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC5C32BE2B97D79000A33C59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC5C32BD2B97D79000A33C59 /* ru */,
+				BC5C32BF2B97D79600A33C59 /* uk */,
+				BC5C32C02B97D79700A33C59 /* de */,
+				BC5C32C12B97D7A400A33C59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BCBBA5CA2B7134B2002E5182 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCBBA5C92B7134B2002E5182 /* ru */,
+				BCBBA5CB2B7134B5002E5182 /* uk */,
+				BCBBA5CC2B7134B7002E5182 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BC2FFD332B6A9BD9008F343B /* Debug */ = {
@@ -197,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,6 +397,9 @@
 				DEVELOPMENT_TEAM = ZK7BYU4ARD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stopwatches/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stopwatches;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +429,9 @@
 				DEVELOPMENT_TEAM = ZK7BYU4ARD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stopwatches/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stopwatches;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +472,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BCF6A1C02B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BCF6A1C12B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodel */,
+			);
+			currentVersion = BCF6A1C12B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodel */;
+			path = StopwatchesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BC2FFD1F2B6A9BD8008F343B /* Project object */;
 }

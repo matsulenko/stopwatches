@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Stopwatches
+
+  Created by Matsulenko on 05.02.2024.
+  
+*/
+
+"Stopwatches" = "Секундоміри";
+"Start" = "Старт";
+"Stop" = "Стоп";
+"Lap" = "Коло";
+"Name" = "Назва";
+"Reset" = "На нуль";
+"Delete" = "Видалити";
+"Add" = "Додати";
+"Enter your stopwatch name" = "Введіть назву секундоміра";
+"Stopwatch name" = "Назва секундоміра";
+"Start all" = "Запустити все";
+"Stop all" = "Зупинити все";
