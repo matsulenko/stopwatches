@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Stopwatches
+
+  Created by Matsulenko on 05.02.2024.
+  
+*/
+
+"Stopwatches" = "Stoppuhren";
+"Start" = "Start";
+"Stop" = "Stopp";
+"Lap" = "Runde";
+"Name" = "Name";
+"Reset" = "Löschen";
+"Delete" = "Löschen";
+"Add" = "Hinzufügen";
+"Enter your stopwatch name" = "Geben Sie den Namen Ihrer Stoppuhr ein";
+"Stopwatch name" = "Name der Stoppuhr";
+"Start all" = "Beginnen Sie alles";
+"Stop all" = "Stoppen Sie alles";
+"Stopwatch" = "Stoppuhr";
