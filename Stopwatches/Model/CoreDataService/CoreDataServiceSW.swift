@@ -69,7 +69,7 @@ final class CoreDataServiceSW: CoreDataServiceSWProtocol {
                 options: [NSMigratePersistentStoresAutomaticallyOption: true]
             )
         } catch {
-            fatalError()
+//            fatalError()
         }
     }
     
@@ -80,11 +80,12 @@ final class CoreDataServiceSW: CoreDataServiceSWProtocol {
             let model = StopwatchesModel(context: mainContext)
             
             model.id = stopwatch.id
-            model.isRunning = stopwatch.isRunning
+            model.status = stopwatch.status.rawValue
             model.name = stopwatch.name
             model.startDate = stopwatch.startDate
             model.accumulatedTime = stopwatch.accumulatedTime
             model.creationDate = stopwatch.creationDate
+            model.num = Int16(stopwatch.num)
             
             guard mainContext.hasChanges else {
                 completion(.failure(.unknown))
@@ -133,6 +134,7 @@ final class CoreDataServiceSW: CoreDataServiceSWProtocol {
                     self.mainContext.delete($0)
                 }
                 try mainContext.save()
+                completion(.success(true))
             } catch {
                 completion(.failure(.custom(reason: error.localizedDescription)))
             }

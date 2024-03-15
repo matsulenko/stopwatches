@@ -22,15 +22,22 @@ struct Stopwatch: View {
     @State var leftButtonType: LeftButtonStopwatch = .name
     @State private var alertShowing = false
     @Binding var isCompact: Bool
-    var statusChanged: (() -> Void)?
-        
+    var startAllIsHidden: ((Bool) -> Void)?
+    var nameString: String {
+        if stopWatchUnit.name != "" {
+            stopWatchUnit.name
+        } else {
+            String(localized: "Stopwatch") + " " + String(stopWatchUnit.num)
+        }
+    }
+    
     var body: some View {
         
         VStack {
             if isCompact == false {
                 VStack {
                     HStack {
-                        Text(stopWatchUnit.name)
+                        Text(nameString)
                             .font(.headline)
                         Spacer()
                     }
@@ -45,33 +52,28 @@ struct Stopwatch: View {
                         leftButtonAction()
                     },
                     label: {
-                        Text(leftButtonText())
-                            .alert("Enter your stopwatch name", isPresented: $alertShowing) {
-                                TextField("Stopwatch name", text: $stopWatchUnit.name)
-                                    .foregroundStyle(Color.text)
-                                    .background(Color.background)
-                                Button("OK") {
-                                    alertShowing.toggle()
-                                    saveStopwatch()
-                                }
-                            }
+                        if isCompact {
+                            Image(systemName: "arrow.clockwise")
+                        } else {
+                            Text(leftButtonText())
+                        }
                     })
                 .buttonStyle(
                     DefaultButton(
-                        backgroundColor: leftButtonBgColor(),
-                        textColor: leftButtonTextColor()
-                    )
+                            backgroundColor: leftButtonBgColor(),
+                            textColor: leftButtonTextColor(),
+                            width: isCompact ? 50 : 100
+                        )
+                    
                 )
                 
                 if isCompact {
                     Spacer()
                     VStack {
-                        if stopWatchUnit.name != "" {
-                            HStack {
-                                Text(stopWatchUnit.name)
-                                    .lineLimit(1)
-                                Spacer()
-                            }
+                        HStack {
+                            Text(nameString)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
                         }
                         StopwatchTime(isCompact: $isCompact, progressTime: $progressTime)
                     }
@@ -84,22 +86,34 @@ struct Stopwatch: View {
                         rightButtonTapped()
                     },
                     label: {
-                        Text(rightButtonText())
+                        if isCompact {
+                            Image(systemName: stopWatchUnit.status == .active ? "pause.fill" : "play.fill")
+                        } else {
+                            Text(rightButtonText())
+                        }
                     })
                 .buttonStyle(
                     DefaultButton(
                         backgroundColor: rightButtonBgColor(),
-                        textColor: rightButtonTextColor()
+                        textColor: rightButtonTextColor(),
+                        width: isCompact ? 50 : 100
                     )
                 )
             }
-            .frame(height: 60)
+            .frame(minHeight: 60)
+            .alert("Enter your stopwatch name", isPresented: $alertShowing) {
+                TextField("Stopwatch name", text: $stopWatchUnit.name)
+                    .foregroundStyle(Color.text)
+                    .background(Color.background)
+                Button("OK", role: .cancel) {
+                    saveStopwatch()
+                }
+            }
             
         }
-        .onChange(of: stopWatchUnit.isRunning) { _ in
+        .onChange(of: stopWatchUnit.status) { _ in
             setLeftButtonType()
             saveStopwatch()
-            statusChanged?()
         }
         .onChange(of: stopWatchUnit.startAll) { _ in
             if stopWatchUnit.startAll == true {
@@ -107,8 +121,22 @@ struct Stopwatch: View {
                 stopWatchUnit.startAll = false
             }
         }
+        .onChange(of: alertShowing) { _ in
+            startAllIsHidden?(alertShowing)
+        }
         .onAppear {
-            if stopWatchUnit.isRunning {
+            switch stopWatchUnit.status {
+            case .new:
+                stopWatchUnit.status = .zero
+                progressTime = currentProgress()
+                currentDate = Date()
+                saveStopwatch()
+            case .zero, .paused:
+                progressTime = currentProgress()
+                if progressTime > 0 {
+                    currentDate = Date()
+                }
+            case .active:
                 currentDate = Date()
                 if stopWatchUnit.startDate == nil {
                     stopWatchUnit.startDate = Date()
@@ -117,12 +145,12 @@ struct Stopwatch: View {
                     currentDate = Date()
                     progressTime = currentProgress()
                 })
-            } else {
-                progressTime = currentProgress()
-                if progressTime > 0 {
-                    currentDate = Date()
-                }
+            case .deleted:
+                currentDate = Date()
             }
+            setLeftButtonType()
+        }
+        .onChange(of: isCompact) { _ in
             setLeftButtonType()
         }
     }
@@ -136,7 +164,9 @@ struct Stopwatch: View {
     }
     
     private func leftButtonAction() {
-        if leftButtonType == .name {
+        if isCompact {
+            resetStopwatch()
+        } else if leftButtonType == .name {
             setName()
         } else if leftButtonType == .reset {
             resetStopwatch()
@@ -145,10 +175,14 @@ struct Stopwatch: View {
     }
     
     private func setLeftButtonType() {
-        if stopWatchUnit.isRunning || currentDate == nil {
-            leftButtonType = .name
-        } else {
+        if isCompact {
             leftButtonType = .reset
+        } else {
+            if stopWatchUnit.status == .paused {
+                leftButtonType = .reset
+            } else {
+                leftButtonType = .name
+            }
         }
     }
     
@@ -157,19 +191,25 @@ struct Stopwatch: View {
     }
     
     private func resetStopwatch() {
+        stopWatchUnit.status = .zero
         stopWatchUnit.startDate = nil
         currentDate = nil
         stopWatchUnit.accumulatedTime = 0
         progressTime = 0
+        saveStopwatch()
     }
     
     private func rightButtonTapped() {
         changeStatus()
-        stopWatchUnit.isRunning.toggle()
+        if stopWatchUnit.status == .active {
+            stopWatchUnit.status = .paused
+        } else {
+            stopWatchUnit.status = .active
+        }
     }
     
     private func changeStatus() {
-        if stopWatchUnit.isRunning {
+        if stopWatchUnit.status == .active {
             timer?.invalidate()
             currentDate = Date()
             progressTime = currentProgress()
@@ -185,7 +225,7 @@ struct Stopwatch: View {
     }
     
     private func currentProgress() -> Double {
-        if stopWatchUnit.isRunning {
+        if stopWatchUnit.status == .active {
             if currentDate != nil {
                 return currentDate!.timeIntervalSince(stopWatchUnit.startDate!) + stopWatchUnit.accumulatedTime
             } else {
@@ -209,7 +249,7 @@ struct Stopwatch: View {
     }
     
     private func rightButtonText() -> String {
-        if stopWatchUnit.isRunning {
+        if stopWatchUnit.status == .active {
             String(localized: "Stop")
         } else {
             String(localized: "Start")
@@ -225,7 +265,7 @@ struct Stopwatch: View {
     }
     
     private func rightButtonTextColor() -> Color {
-        if stopWatchUnit.isRunning {
+        if stopWatchUnit.status == .active {
             Color.white
         } else {
             Color.black
@@ -233,7 +273,7 @@ struct Stopwatch: View {
     }
     
     private func rightButtonBgColor() -> Color {
-        if stopWatchUnit.isRunning {
+        if stopWatchUnit.status == .active {
             Color.red
         } else {
             Color.green
@@ -244,9 +284,10 @@ struct Stopwatch: View {
 #Preview {
     Stopwatch(stopWatchUnit: .constant(StopwatchData(
         id: UUID().uuidString,
-        isRunning: false,
+        status: .zero,
         name: "",
         accumulatedTime: 0,
-        creationDate: Date()
-    )), isCompact: .constant(false))
+        creationDate: Date(),
+        num: 1
+    )), isCompact: .constant(true))
 }

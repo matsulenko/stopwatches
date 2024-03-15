@@ -21,6 +21,7 @@
 		BCBBA5D62B71417E002E5182 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5D52B71417E002E5182 /* DefaultButton.swift */; };
 		BCBBA5DE2B714DD8002E5182 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5DD2B714DD8002E5182 /* CustomDivider.swift */; };
 		BCBBA5E02B7164A3002E5182 /* StartAllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBA5DF2B7164A3002E5182 /* StartAllButton.swift */; };
+		BCE46E282B9F78A100050BB0 /* StopwatchStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE46E272B9F78A100050BB0 /* StopwatchStatuses.swift */; };
 		BCF6A1BE2B8A545900BB3FEC /* CoreDataServiceSW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF6A1BD2B8A545900BB3FEC /* CoreDataServiceSW.swift */; };
 		BCF6A1C22B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF6A1C02B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		BCBBA5D52B71417E002E5182 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		BCBBA5DD2B714DD8002E5182 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		BCBBA5DF2B7164A3002E5182 /* StartAllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAllButton.swift; sourceTree = "<group>"; };
+		BCE46E272B9F78A100050BB0 /* StopwatchStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchStatuses.swift; sourceTree = "<group>"; };
 		BCF6A1BD2B8A545900BB3FEC /* CoreDataServiceSW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceSW.swift; sourceTree = "<group>"; };
 		BCF6A1C12B8A57F000BB3FEC /* StopwatchesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StopwatchesDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				BCBBA5D12B713C8A002E5182 /* StopwatchTime.swift */,
 				BCBBA5DF2B7164A3002E5182 /* StartAllButton.swift */,
 				BC18584D2B85258900F40FBA /* StopwatchData.swift */,
+				BCE46E272B9F78A100050BB0 /* StopwatchStatuses.swift */,
 			);
 			path = Stopwatch;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				BCBBA5D42B713E64002E5182 /* Stopwatch.swift in Sources */,
 				BC2FFD2B2B6A9BD8008F343B /* StopwatchesApp.swift in Sources */,
 				BCBBA5D22B713C8A002E5182 /* StopwatchTime.swift in Sources */,
+				BCE46E282B9F78A100050BB0 /* StopwatchStatuses.swift in Sources */,
 				BCF6A1BE2B8A545900BB3FEC /* CoreDataServiceSW.swift in Sources */,
 				BCBBA5DE2B714DD8002E5182 /* CustomDivider.swift in Sources */,
 				BCBBA5E02B7164A3002E5182 /* StartAllButton.swift in Sources */,
@@ -392,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Stopwatches/Preview Content\"";
 				DEVELOPMENT_TEAM = ZK7BYU4ARD;
 				ENABLE_PREVIEWS = YES;
@@ -424,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Stopwatches/Preview Content\"";
 				DEVELOPMENT_TEAM = ZK7BYU4ARD;
 				ENABLE_PREVIEWS = YES;

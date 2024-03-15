@@ -8,31 +8,34 @@
 import Foundation
 import SwiftUI
 
-struct StopwatchData: Decodable, Hashable {
+struct StopwatchData: Decodable, Hashable, Identifiable {
     let id: String
-    var isRunning: Bool
+    var status: StopwatchStatus
     var name: String
     var startDate: Date?
     var accumulatedTime: Double
     let creationDate: Date
     var startAll: Bool?
+    var num: Int
     
-    init(id: String, isRunning: Bool, name: String, startDate: Date? = nil, accumulatedTime: Double, creationDate: Date, startAll: Bool? = false) {
+    init(id: String, status: StopwatchStatus, name: String, startDate: Date? = nil, accumulatedTime: Double, creationDate: Date, startAll: Bool? = false, num: Int) {
         self.id = id
-        self.isRunning = isRunning
+        self.status = status
         self.name = name
         self.startDate = startDate
         self.accumulatedTime = accumulatedTime
         self.creationDate = creationDate
         self.startAll = startAll
+        self.num = num
     }
     
     public init(stopwatchesModel: StopwatchesModel) {
         id = stopwatchesModel.id ?? ""
-        isRunning = stopwatchesModel.isRunning
+        status = StopwatchStatus(rawValue: stopwatchesModel.status ?? "New") ?? .new
         name = stopwatchesModel.name ?? ""
         startDate = stopwatchesModel.startDate
         accumulatedTime = stopwatchesModel.accumulatedTime
         creationDate = stopwatchesModel.creationDate ?? Date()
+        num = Int(stopwatchesModel.num)
     }
 }
