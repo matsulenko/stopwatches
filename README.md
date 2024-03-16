@@ -73,4 +73,5 @@ Stopwatches app is developed by Andrey Matsulenko in 2024.
 
 # Contacts
 A feedback form on my official website: https://matsulenko.com/stopwatches
+
 LinkedIn: https://linkedin.com/in/matsulenko/
