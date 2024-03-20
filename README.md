@@ -1,4 +1,5 @@
 # Stopwatches for iOS. Set more than one!
+Stopwatches on the AppStore: https://apps.apple.com/ru/app/stopwatches-set-more-than-one/id6478937227
 <img src="https://github.com/matsulenko/stopwatches/assets/127790743/2f4ffcb2-564b-47ed-b61e-20ff28b0f1cf" height="450">
 
 Stopwatches is a SwiftUI app for iOS and iPadOS. You can set up to 10 independent stopwatches. Special "Start all" or "Stop all" buttons can help you to start or stop all your stopwatches at the same time.
