@@ -9,8 +9,8 @@ Stopwatches is a SwiftUI app for iOS and iPadOS. You can set up to 10 independen
 Stopwatches work with thousandths of a second accuracy. The final result of a stopwatch run is the difference between times of tapping stop and start buttons.
 An active stopwatch display is updated on the screen by a timer every 0.021 seconds after start.
 
-## Up to ten independent stopwatches at the same time
-You can add up to ten stopwatches that are independent. It means that you can run or stop any stopwatch and this will not affect other ones.
+## Up to fifty independent stopwatches at the same time
+You can add up to fifty stopwatches that are independent. It means that you can run or stop any stopwatch and this will not affect other ones.
 
 <img src="https://github.com/matsulenko/stopwatches/assets/127790743/da960fb9-11fa-4c67-b8e5-76bd8c045ced" height="550">
 
@@ -48,6 +48,10 @@ Stopwatches and their statuses are saved in a local CoreData database.
 Local CoreData database saving helps you not to lose stopwatches data even after closing the app.
 
 # Changelog
+## v. 1.1
+The maximum number of stopwatches has been increased to 50.
+The application has added a prompt for the user to leave a review.
+
 ## v. 1.0
 Initial release
 
