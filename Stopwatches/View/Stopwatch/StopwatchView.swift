@@ -14,7 +14,7 @@ struct StopwatchView: View {
     var predicate: NSPredicate?
     @State private var startAllButtonIsShown = false
     @AppStorage("isCompact") var isCompact = true
-    var maxCount = 10
+    var maxCount = 50
     @State private var alertShowing = false
     @State private var alertText = ""
     @State private var chosenIndex: Int?
