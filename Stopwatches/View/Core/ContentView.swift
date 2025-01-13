@@ -15,7 +15,8 @@ struct ContentView: View {
     
     var body: some View {
         StopwatchView()
-            .onAppear{
+            .onAppear {
+                UIApplication.shared.isIdleTimerDisabled = true
                 if !startUpIsCounted {
                     appStartUpsCount += 1
                     startUpIsCounted = true
@@ -24,6 +25,10 @@ struct ContentView: View {
                 if appStartUpsCount == 5 || appStartUpsCount % 50 == 0 {
                     requestReview()
                 }
+            }
+            .onDisappear {
+                // Re-enable the idle timer when the view disappears
+                UIApplication.shared.isIdleTimerDisabled = false
             }
     }
 }
